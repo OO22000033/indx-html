@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Meals</title>
+
+<link rel="stylesheet" href="style.css"> <!-- CSS -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- JQuery مكتبة مخصصة للجافا -->
+<script src="myFunctions.js"></script> <!-- JS -->
+</head>
+
+<body>
+ <div class="background"></div>
+    <body>
+        <header>
+
+<h1> الوجبات</h1> <!-- عنوان رئيسي -->
+
+<!-- قائمة التنقل -->
+<nav>
+<a href="index.html">الرئيسية</a> 
+<a href="AboutUs.html">من نحن</a> 
+<a href="Meals.html">الوجبات</a>
+</nav>
+</header>
+<section>
+    <h1>مطعم الشام</h1>
+    <p> للمأكولات البحرية</p>
+</section>
+
+
+
+<table border="1"> <!-- جدول -->
+<tr>
+<th>اختيار</th>
+<th>الرمز</th>
+<th>اسم الوجبة</th>
+<th>السعر</th>
+<th>التفاصيل</th>
+</tr>
+
+<!-- وجبة 1 -->
+<tr>
+<td><input type="checkbox" class="meal" value="110000"></td> <!-- اختيار -->
+<td>SF-001</td>
+<td>سمك مشوي</td>
+<td>110000</td>
+<td>
+<button onclick="toggleDetails('d1')">إظهار</button> <!-- زر التفاصيل -->
+</td>
+</tr>
+
+<tr id="d1" style="display:none;">
+<td colspan="5">
+تفاصيل: وجبة بحرية مع مكونات طازجة
+</td>
+</tr>
+
+<!-- زر متابعة -->
+</table>
+
+<button onclick="showForm()">متابعة</button>
+
+<!-- نموذج -->
+<div id="formDiv" style="display:none;">
+
+<h2>نموذج الطلب</h2>
+
+<form onsubmit="return validateForm()">
+
+<input type="text" id="name" placeholder="الاسم الكامل"><br>
+
+<input type="text" id="nid" placeholder="الرقم الوطني"><br>
+
+<input type="text" id="dob" placeholder="dd-mm-yyyy"><br>
+
+<input type="text" id="phone" placeholder="رقم الموبايل"><br>
+
+<input type="email" id="email" placeholder="الإيميل"><br>
+
+<button type="submit">إرسال</button>
+
+</form>
+
+</div>
+
+
+</body>
+</html>
