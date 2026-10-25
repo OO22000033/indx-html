@@ -7,39 +7,30 @@
          border:solid red ;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); 
   padding: 10px 0;
-  white-space: nowrap;     /* منع النص من الانقسام لعدة أسطر */
-}
+  white-space: nowrap;     /* منع النص من الانقسام لعدة أسطر */}
 .marquee-text {
   display: inline-block;
   font-size: 24px;        
   font-weight: bold;
   color: #121212;
   /* تطبيق الحركة: اسم الحركة | مدة الدورة | الخطيّة | التكرار اللانهائي */
-  animation: marquee-animation 10s linear infinite;
-}
+  animation: marquee-animation 10s linear infinite;}
 /*  تحديد نقطة بداية ونهاية الحركة */
 @keyframes marquee-animation {
-  0% {
-    transform: translateX(100%); /* البداية: من خارج الشاشة جهة اليمين */
-  }
-  100% {
-    transform: translateX(-100%); /* النهاية: يختفي تماماً جهة اليسار */
-  }
-}
+  0% {transform: translateX(100%); /* البداية: من خارج الشاشة جهة اليمين */}
+  100% {transform: translateX(-100%); /* النهاية: يختفي تماماً جهة اليسار */}}
 .car-image {
     width: 300px;      /* عرض ثابت لكل الصور */
     height: 200px;     /* ارتفاع ثابت لكل الصور */
     object-fit: cover; /* لقص الزوائد وجعل الصورة تملأ المساحة دون أي تشوه */
-    border-radius: 8px; /* إطار جمالي دائرتي الأطراف */
-}
+    border-radius: 8px; /* إطار جمالي دائرتي الأطراف */}
 form {
   width: 380px;
   background: #ffffff;
   padding: 25px;
   border-radius: 16px;
   border: 1px solid rgba(0,0,0,0.08);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-}
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);}
 form input {
   width: 100%;
   padding: 10px 12px;
@@ -48,34 +39,27 @@ form input {
   border: 1px solid #ddd;
   outline: none;
   transition: 0.3s;
-  font-size: 14px;
-}
+  font-size: 14px;}
 /* عند الضغط */
 form input:focus
 {
   border-color: #ff0000;
-  box-shadow: 0 0 6px rgba(63, 31, 31, 0.3);
-}
+  box-shadow: 0 0 6px rgba(63, 31, 31, 0.3);}
 .button {
   width: 22%;
   padding: 11px;
   border: solid white;
   border-radius:  100px;
-
   background: #ff0000;
   color: white;
   font-size: 20px;
   cursor: pointer;
-  transition: 0.3s;
-}
-
+  transition: 0.3s;}
 .button:hover {
   background: #ffffff;
   color: red;
   border: solid red;
-  transform: translateY(-1px);
-}
-
+  transform: translateY(-1px);}
 /* زر التفاصيل   */
 .qty-t {
     width: 100px;
@@ -87,26 +71,34 @@ form input:focus
     cursor: pointer;
     background-color: #bc1b1b;
     color: white;
-    transition: 0.2s;
-}
-
+    transition: 0.2s;}
 /* عند المرور */
 .qty-t:hover {
      background: #ffffff;
   color: red;
   border: solid red;
-    transform: scale(1.1);
-}
-
+    transform: scale(1.1);}
 /*  زر الاختيار */
 .car-select {
     width: 25%;
-    height: 25px;
-}
+    height: 25px;}
 /* عند المرور */
 .car-select:hover {
-    transform: scale(1.3);
-}
+    transform: scale(1.3);}
+.car-card {
+    display: flex;             /* تفعيل نظام المرونة */
+    align-items: center;       
+    gap: 20px;                 /* مسافة بين الصورة والنص */
+    font-size: 30px;           
+    text-align: right;         
+    direction: rtl;          }
+.car-image {
+    max-width: 300px;         
+    height: auto;
+    border-radius: 200px;    }
+.car-details b {
+    display: block;           
+    margin-bottom: 8px;    }
 
 
 
@@ -137,8 +129,7 @@ section  p {     font-size: 20px;
     margin: 20px 0; /* مسافة فوق وتحت */
     padding: 15px; /* مسافة داخلية */
     background: #2b376f; 
-    border-radius: 100px;  
-}
+    border-radius: 100px; }
 /* نص الوصف */
 .description p {
     font-size: 20px; 
@@ -149,8 +140,7 @@ section  p {     font-size: 20px;
     text-align: right;
     margin-top: 25px; /* مسافة فوق العنوان */
     font-size: 22px; 
-    color: #332d2d; 
-}
+    color: #332d2d; }
 /* كل سطر من معلومات التواصل */
 .contact p {color: rgb(241, 233, 233);
     text-align: right;
@@ -168,6 +158,18 @@ section  p {     font-size: 20px;
     background: #4825d0; 
     transform: scale(1.03); }
 
+    
+/*  تذيل الصفحة  الرئيسية */
+    footer{
+  color: #ffffff;
+    text-align:center; /* توسيط النص */
+    padding:15px; /* مسافة داخلية */
+    background: linear-gradient(135deg, #6b777f, #6680f3); 
+    border-bottom: 2px solid #ff0000;
+    border-top: 2px solid #ff0000 }
+
+
+
 
 
 
@@ -177,42 +179,40 @@ section  p {     font-size: 20px;
     margin:0; /* إزالة المسافات الخارجية الافتراضية */
     padding:0; /* إزالة المسافات الداخلية الافتراضية */
     box-sizing:border-box; /* يخلي العرض والطول يشملوا البادينغ والحدود */
-    font-family: 'Segoe UI', sans-serif; /* نوع الخط */}
+    font-family: 'Segoe UI', sans-serif; }
 /* تنسيق الصفحة بالكامل */
 body{
     height:100vh; /* ارتفاع الصفحة كامل الشاشة */
-    background:#160563; /* لون خلفية أساسي داكن */
+    background:#160563; 
     overflow-x:hidden; /* منع سكرول أفقي */
-    color:white; /* لون النص أبيض */}
+    color:white; }
 /* خلفية الألوان المتحركة */
 .background{
     position:fixed; /* تثبيت العنصر بالخلف */
-    width:200%; /* عرض أكبر من الشاشة ليعطي حركة */
+    width:200%; /* عرض أكبر من الشاشة  */
     height:200%; /* ارتفاع أكبر من الشاشة */
     background: 
         radial-gradient(circle at 30% 30%, #2b376f, transparent 40%), 
         radial-gradient(circle at 70% 70%, #453ad7, transparent 40%), 
         radial-gradient(circle at 50% 50%, #fbfbfb, transparent 40%); 
     animation: move 15s infinite alternate; /* تشغيل حركة اسمها move */
-    z-index:-1; /* إرسال العنصر للخلف */
-    filter: blur(100px); /* تمويه قوي ليعطي تأثير ناعم */}
+    z-index:-1; /* إرسال العنصر للخلف */}
 /* تعريف حركة الخلفية */
 @keyframes move{
     0%{ transform: translate(-15%, -15%) } /* بداية الحركة */
     100%{ transform: translate(15%, 15%) } /* نهاية الحركة */}
 /* تنسيق الهيدر */
 header {
-    display: flex; /* استخدام نظام الفليكس لتنظيم المحتوى */
+    display: flex; 
     flex-direction: column; /* تحويل الترتيب من أفقي إلى عمودي لتصبح العناصر تحت بعضها */
     align-items: center; /* توسيط جميع العناصر في منتصف الشاشة */
     justify-content: center; /* توسيط المحتوى عمودياً داخل الهيدر */
     gap: 15px; /* إضافة مسافة فاصلة ومتناسقة بين كل عنصر والذي تحته */
-    padding: 30px 20px; /* مسافات داخلية واسعة لمنح التصميم مساحة للتنفس */
-    background: linear-gradient(135deg, #f5fbff, #2b376f); 
+    padding: 30px 20px; 
+    background: linear-gradient(135deg, #6b777f, #6680f3); 
     border-radius: 0 0 24px 24px; /* انحناء         */
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4); /* ظل عميق       */
-    border-bottom: 2px solid #ff0000; /* خط سفلي ملون       */
-}
+    border-bottom: 2px solid #ff0000; /* خط سفلي ملون       */}
 /* عنوان الهيدر */
 header h1{
     font-size:24px; /* حجم الخط */}
@@ -229,25 +229,19 @@ nav a::after{
     position:absolute; /* تحديد موقعه */
     width:0%; /* يبدأ بدون عرض */
     height:5px; /* سماكة الخط */
-    background:#ff0000; /* لون الخط */
+    background:#ff0000; 
     left:0; /* يبدأ من اليسار */
-    bottom:-4px; /* تحت النص */
-    transition:0.3s; /* سرعة الحركة */}
+    bottom:-4px; 
+    transition:0.3s; }
 /* عند تمرير الماوس */
 nav a:hover::after{
     width:100%; /* الخط يتمدد بالكامل */}
 
-    footer{
-  color: #ffffff;
-    text-align:center; /* توسيط النص */
-    padding:15px; /* مسافة داخلية */
-    background:rgba(0, 0, 0, 0.05); /* خلفية شفافة */
-    border-bottom: 2px solid #ff0000;
-}
 .table {
   width: 80%; /*عرض الجدول  */
   margin: 20px auto; /* مسافة من الأعلى والأسفل + توسيط الجدول */
   border-collapse: collapse; /* دمج الحدود بين الخلايا لتظهر بشكل متصل */
+  border: double;
   font-family: Arial, sans-serif; /* نوع الخط داخل الجدول */
   box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* ظل خفيف حول الجدول  */}
 .table th {
@@ -257,12 +251,10 @@ nav a:hover::after{
   text-align: center; /* توسيط النص */
   font-size: 20px; /* حجم الخط */}
 .table td {
-  padding: 12px; /* مسافة داخلية للخلايا */
-  text-align: center; /* توسيط النص داخل الخلية */}
+  padding: 12px; 
+  text-align: center; }
 .table tr:nth-child(even) {
   background-color: #473db1; /* تلوين الصفوف الزوجية   */}
 .table tr:hover {
   background-color: #3e3e3e; /* تغيير لون الصف عند مرور الماوس */
   transition: 0.3s; /* جعل تغيير اللون تدريجي وسلس */}
-.table, th, td {
-border: 1px solid #ff0000; /* إضافة حدود خفيفة للجدول والخلايا */}
